@@ -14,7 +14,7 @@ $ serverless plugin install -n serverless-vpc-discovery
 ``` console
 $ sls deploy
 ```
-<p> Para testar a solução você deve acessar a AWS no serviço <a href="https://aws.amazon.com/pt/api-gateway/">API Gateway</a> e fazer login,<br> no menu lateral selecione <strong>Resources</strong>.<br>Expanda até encontrar a rota POST, em seguida escolha o método Test, adicione payload ao Request Body e clique em Test.</p>
+<p> Para testar a solução você deve acessar a AWS no serviço <a href="https://aws.amazon.com/pt/api-gateway/">API Gateway</a> e fazer login, no menu lateral selecione <strong>Resources</strong>.<br>Expanda até encontrar a rota POST, em seguida escolha o método Test, adicione payload ao Request Body e clique em Test.</p>
 
 <p>IMPORTANTE: Garanta que região na AWS condiz com a descrita no arquivo serverless.yml,</p>
 
