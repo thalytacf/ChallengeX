@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "serverless-vpc-discovery": "^4.0.1"
+  }
+}

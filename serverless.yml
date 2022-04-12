@@ -1,0 +1,43 @@
+service: challengex
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.8
+  region: sa-east-1
+
+functions:
+  requestHandler:
+    handler: handler.request_handler
+    events:
+      - http:
+          path: posts/create
+          method: post
+  sqsHandler:
+    handler: handler.sqs_queue_handler
+    events:
+      - sqs:
+          arn:
+            Fn::GetAtt:
+              - ChallengeXQueue
+              - Arn
+        batchSize: 1
+
+vpc:
+  vpcName: 'vpc-default'
+  subnetNames:
+    - 'vpc-default_subnet-1'
+  securityGroupNames:
+    - 'default'
+    
+
+resources:
+  Resources:
+    ChallengeXQueue:
+      Type: 'AWS::SQS::Queue'
+
+configValidationMode: off
+
+plugins:
+  - serverless-vpc-discovery
