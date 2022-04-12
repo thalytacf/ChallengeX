@@ -9,14 +9,14 @@ $ npm install -g serverless
 $ npm i
 $ serverless plugin install -n serverless-vpc-discovery
 ```
-<p>Para subir o ambinte <strong>serveless</strong> para AWS:</p>
+<p>Para subir o ambiente <strong>serveless</strong> para AWS:</p>
 
 ``` console
 $ sls deploy
 ```
-<p> Para testar a solução você deve acessar a AWS no serviço API Gateway, no menu lateral selecione
-<strong>Resources</strong>.<br>Expanda até encontrar a rota POST, em seguinta escolha o metodo Test, adicione payload ao Request Body e clique em Test.</p>
+<p> Para testar a solução você deve acessar a AWS no serviço <a href="https://aws.amazon.com/pt/api-gateway/">API Gateway</a> e fazer login,<br> no menu lateral selecione <strong>Resources</strong>.<br>Expanda até encontrar a rota POST, em seguida escolha o método Test, adicione payload ao Request Body e clique em Test.</p>
 
+<p>IMPORTANTE: Garanta que região na AWS condiz com a descrita no arquivo serverless.yml,</p>
 
 ## Arquitetura
 ![alt text](img/architecture.png)
